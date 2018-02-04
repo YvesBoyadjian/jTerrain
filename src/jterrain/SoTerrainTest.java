@@ -766,7 +766,6 @@ public class SoTerrainTest {
 	  camera.nearDistance.setValue(0.01f);
 	  render_area.setSceneGraph(root);
 	  render_area.setTitle("SoTerrain Test Application");
-	  render_area.setSize(new SbVec2s((short)2500, (short)1400));
 	  render_area.show();
 	  render_area.setFullScreen(is_full_screen);
 
@@ -789,6 +788,7 @@ public class SoTerrainTest {
 	  /* Run application. */
 	  window.open();
 	  window.setSize((short)2500, (short)1400);
+	  window.setLocation(10, 10);
 	  
 	  while (!window.isDisposed ()) {
 			if (!display.readAndDispatch ()) display.sleep ();

@@ -89,6 +89,7 @@ public SoQtFreeViewer(Composite parent, String name,
   sensitivity = 1.0f; invert = false;
 
   constructorCommon(true);
+  setKeyCommandsEnabled(false); // java port
 }
 
 public void destructor()
