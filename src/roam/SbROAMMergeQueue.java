@@ -164,5 +164,9 @@ public class SbROAMMergeQueue extends SbHeap {
     }
     /* Datove polozky. */
     /// Struktura callback obsahuj��metody pro pr�i s diamanty.
-    protected static SbHeapFuncs heap_funcs;
+    protected static final SbHeapFuncs heap_funcs = new SbHeapFuncs(
+    SbROAMMergeQueue::getDiamondPriority, SbROAMMergeQueue::getDiamondIndex,
+    SbROAMMergeQueue::setDiamondIndex);
+
+
 }

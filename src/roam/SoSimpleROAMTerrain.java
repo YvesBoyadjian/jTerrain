@@ -63,6 +63,7 @@ import jscenegraph.database.inventor.nodes.SoSubNode;
 import jscenegraph.database.inventor.sensors.SoFieldSensor;
 import jscenegraph.database.inventor.sensors.SoSensor;
 import jscenegraph.port.Array;
+import jscenegraph.port.Destroyable;
 import jterrain.profiler.PrProfiler;
 
 /**
@@ -690,7 +691,7 @@ private void SEND_VERTEX(int ind,final SoPrimitiveVertex vertex) { int index = (
 		  /* Odstraneni rodice z fronty trojuhelniku na rodeleni a diamondu
 		  na spojeni. */
 		  split_queue.remove(parent);
-		  merge_queue.remove(parent).destructor();
+		  Destroyable.delete(merge_queue.remove(parent));
 
 		  /* Ziskani potomku rozdelovaneho trojuhelniku. */
 		  int child_index = ((Array.minus(parent.triangle, triangle_tree)) << 1) + 1;
@@ -704,8 +705,8 @@ private void SEND_VERTEX(int ind,final SoPrimitiveVertex vertex) { int index = (
 		    computePriority(right_triangle));
 
 		  /* Vlozeni potomku do fronty. */
-		  split_queue.add(left_child);
-		  split_queue.add(right_child);
+		  split_queue.add(left_child[0]);
+		  split_queue.add(right_child[0]);
 
 		  /* Propojeni potomku. */
 		  left_child[0].left = right_child[0];
@@ -1002,6 +1003,7 @@ private void SEND_VERTEX(int ind,final SoPrimitiveVertex vertex) { int index = (
 		  SoSimpleROAMTerrain instance =
 		    (SoSimpleROAMTerrain)(_instance);
 		  instance.map_size = instance.mapSize.getValue();
+		  first_run = true; //YB
 		}
 
   

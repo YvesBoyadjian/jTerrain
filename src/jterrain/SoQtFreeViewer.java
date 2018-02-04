@@ -189,7 +189,7 @@ protected boolean processSoLocation2Event( SoLocation2Event _event)
     new SbRotation(new SbVec3f(0.0f, 0.0f, 1.0f), rotation_z)));
 
   old_position.copyFrom( getPosition().operator_add( getCenter()));
-  setCursorPosition(old_position);
+  // setCursorPosition(old_position); YB
   return true;
 }
 

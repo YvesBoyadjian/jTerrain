@@ -34,11 +34,13 @@
 
 package roam;
 
+import jscenegraph.port.Destroyable;
+
 /**
  * @author Yves Boyadjian
  *
  */
-public class SbROAMMergeQueueDiamond {
+public class SbROAMMergeQueueDiamond implements Destroyable {
   
     /* Metody. */
     /** Konstruktor.
