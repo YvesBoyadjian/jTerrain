@@ -247,6 +247,9 @@ static boolean first_run = true;
 
     /* Zjisteni poctu trojuhelniku ve stromu jako 2^(level + 1) - 1. */
     tree_size = (1 << (level + 1)) - 1;
+    
+    //YB
+    if(tree_size < 3) tree_size = 3; //TODO
 
     /* Vypocet indexu rohovych vertexu mapy. */
     int top_left = 0;

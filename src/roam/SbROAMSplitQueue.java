@@ -148,5 +148,6 @@ public class SbROAMSplitQueue extends SbHeap {
     
     /* Datove polozky. */
     /// Struktura callback obsahuj��metody pro pr�i s trojheln�y.
-    protected static SbHeapFuncs heap_funcs;
+    protected static final SbHeapFuncs heap_funcs = new SbHeapFuncs(SbROAMSplitQueue::getTrianglePriority,
+    		SbROAMSplitQueue::getTriangleIndex, SbROAMSplitQueue::setTriangleIndex);
 }
