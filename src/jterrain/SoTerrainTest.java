@@ -533,7 +533,7 @@ public class SoTerrainTest {
 
 	  /* Initialization of custom Inventor classes. */
 	  SoSimpleROAMTerrain.initClass();
-	  //SoSimpleGeoMipmapTerrain.initClass(); //TODO
+	  SoSimpleGeoMipmapTerrain.initClass();
 	  //SoSimpleChunkedLoDTerrain.initClass();
 	  //SoProfileGroup.initClass();
 

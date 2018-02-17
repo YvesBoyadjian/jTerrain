@@ -221,10 +221,10 @@ static boolean first_run = true;
   viewport_region = SoViewportRegionElement.get(state);
 
   /* Pri prvnim prubehu se vygeneruje strom trojuhelniku */
-  if (first_run)
+  if (first_run) 
   {
     PrProfiler.PR_START_PROFILE("preprocess");
-    first_run = false;
+  	first_run = false;
 
     /* Pracujeme pouze s tridimenzionalnimi geometrickymi souradnicemi
     a dvoudimenzionalnimi texturovymi souradnicemi. */
@@ -1004,6 +1004,7 @@ private void SEND_VERTEX(int ind,final SoPrimitiveVertex vertex) { int index = (
 		    (SoSimpleROAMTerrain)(_instance);
 		  instance.map_size = instance.mapSize.getValue();
 		  first_run = true; //YB
+		  instance.touch(); //YB
 		}
 
   
