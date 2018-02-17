@@ -534,7 +534,7 @@ public class SoTerrainTest {
 	  /* Initialization of custom Inventor classes. */
 	  SoSimpleROAMTerrain.initClass();
 	  SoSimpleGeoMipmapTerrain.initClass();
-	  //SoSimpleChunkedLoDTerrain.initClass();
+	  SoSimpleChunkedLoDTerrain.initClass();
 	  //SoProfileGroup.initClass();
 
 	  /* Create scene graph. */
